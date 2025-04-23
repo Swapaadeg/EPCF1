@@ -10,6 +10,12 @@ header {
             p {
                 margin-right: 4rem;
             }
+            h1 {
+                margin-bottom: 0;
+            }
+            h2 {
+                margin-top: 0;
+            }
             img {
                 width: 200px;
                 height: 200px;
@@ -19,11 +25,10 @@ header {
             }
         }
         .header__navbar {
-            margin-bottom: 13rem;
+            margin-bottom: 5rem;
             margin-top: 5rem;
             margin-left: 1rem;
             a {
-                text-decoration: none;
                 color: variable.$color-text-primary;
             }
             li {
@@ -51,6 +56,12 @@ header {
             .reseaux {
                 font-size: 3rem;
                 color: variable.$color-text-primary;
+                &:hover {
+                    background: linear-gradient(to right, #9DA2AB, #0D324D);
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    transform: scale(1.2);
+                }
             }
         }
     }

@@ -1,4 +1,27 @@
+@use "../abstracts/variables" as variable;
 main {
     width: 50%;
     margin-left: 50%;
+}
+
+.description__content {
+    a {
+        font-family: variable.$font-bold;
+        color: variable.$color-title-text-secondary;
+    }
+    a:hover {
+        color: variable.$color-accent;
+    }
+    span {
+        font-family: variable.$font-bold;
+        color: variable.$color-title-text-secondary;
+        transition: all 0.3s ease;
+    }
+    span:hover {
+        cursor: url(../../assets/img/tft.png) 16 16, auto;
+        background: linear-gradient(to right, #005A82, #C89B3C);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transform: scale(1.1);
+    }
 }
