@@ -1,3 +1,12 @@
+//Abstracts
+@use "abstracts/variables";
+
+//Base 
+@use "base/base";
+@use "base/responsive";
+@use "base/typographie";
+@use "base/utilities";
+
 //LAYOUTS 
 
 @use "layouts/footer";
@@ -8,14 +17,6 @@
 @use "components/banner";
 @use "components/button";
 
-//Abstracts
-
-@use "abstracts/variables";
-
-//Base 
-@use "base/base";
-@use "base/responsive";
-@use "base/typographie";
-@use "base/utilities";
-
+//Pages
+@use "pages/homepage";
 

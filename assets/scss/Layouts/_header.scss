@@ -1,0 +1,58 @@
+@use "../abstracts/variables" as variable;
+
+header {
+    width: 35%;
+    position: fixed;
+    .header__presentation {
+        .header__titles {
+            display: flex;
+            align-items: center;
+            p {
+                margin-right: 4rem;
+            }
+            img {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                margin-right: 2rem;
+                object-fit: cover;
+            }
+        }
+        .header__navbar {
+            margin-bottom: 13rem;
+            margin-top: 5rem;
+            margin-left: 1rem;
+            a {
+                text-decoration: none;
+                color: variable.$color-text-primary;
+            }
+            li {
+                list-style: none;
+                margin-bottom: 0.5rem;
+            }
+            li::before {
+                content: "";
+                display: inline-block;
+                width: 70px;
+                height: 3px;
+                background: variable.$color-text-primary;
+                margin-right: 4rem;
+                transition: width 0.3s ease, background 0.3s ease;
+            }
+            li:hover::before {
+                width: 150px; 
+                background: linear-gradient(to right, variable.$color-text-primary, variable.$color-primary);
+            }
+        }
+        .header__reseaux {
+            display: flex;
+            gap: 4rem;
+            margin-left: 12rem;
+            .reseaux {
+                font-size: 3rem;
+                color: variable.$color-text-primary;
+            }
+        }
+    }
+}
+
