@@ -16,7 +16,14 @@
         <section id="header__wrapper container">
             <div class="header__presentation">
                     <div class="header__titles">
-                        <img src="assets/img/image0.png" alt="Photo de Marie">
+                        <div class="img-burger">
+                            <img src="assets/img/image0.png" alt="Photo de Marie">
+                            <div class="burger" id="burger">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
                         <div class="header__text">
                             <h1>Marie Rivier</h1>
                             <h2>Full stack développeuse</h2>
@@ -31,11 +38,11 @@
                         <li><a href="#footer__wrapper container">Contact</a></li>
                     </ul>
                 </div>
-                <div class="header__reseaux">
-                    <a class="reseaux" href="https://www.linkedin.com/in/marie-rivier/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a class="reseaux" href="https://github.com/Swapaadeg"><i class="fa-brands fa-github"></i></a>
-                    <a class="reseaux" href=""><i class="fa-brands fa-instagram"></i></a>
-                </div>
+            </div>
+            <div class="header__reseaux">
+                <a class="reseaux" href="https://www.linkedin.com/in/marie-rivier/"><i class="fa-brands fa-linkedin"></i></a>
+                <a class="reseaux" href="https://github.com/Swapaadeg"><i class="fa-brands fa-github"></i></a>
+                <a class="reseaux" href=""><i class="fa-brands fa-instagram"></i></a>
             </div>
         </section>
     </header>
@@ -233,7 +240,7 @@
                             <label for="message">Message *</label><br>
                             <textarea id="message" name="message" rows="6" required></textarea>
                         </div>
-                        
+                        <p>* Champ obligatoire</p>
                         <div class="input">
                             <input type="checkbox" id="consentement" name="consentement" required>
                             <label for="consentement">

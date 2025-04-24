@@ -107,6 +107,9 @@ footer {
 .footer__wrapper {
   padding: 0;
 }
+.footer__wrapper p {
+  font-family: "poppins italic";
+}
 .footer__wrapper .footer__name {
   display: flex;
   gap: 4rem;
@@ -194,6 +197,15 @@ label {
   display: inline-block;
 }
 
+@media screen and (max-width: 1000px) {
+  footer {
+    margin: 0;
+  }
+  footer .footer__wrapper .footer__name {
+    flex-direction: column;
+    gap: 0;
+  }
+}
 header {
   position: fixed;
   width: 35%;
@@ -206,6 +218,7 @@ header .header__presentation .header__titles {
 header .header__presentation .header__titles p {
   margin-right: 4rem;
   width: 50%;
+  font-family: "poppins italic";
 }
 header .header__presentation .header__titles h1 {
   margin-bottom: 0;
@@ -221,9 +234,8 @@ header .header__presentation .header__titles img {
   object-fit: cover;
 }
 header .header__presentation .header__navbar {
-  margin-bottom: 5rem;
   margin-top: 5rem;
-  margin-left: 1rem;
+  margin-left: 3rem;
 }
 header .header__presentation .header__navbar a {
   color: #9DA2AB;
@@ -245,21 +257,65 @@ header .header__presentation .header__navbar li a:hover::before {
   width: 150px;
   background: linear-gradient(to right, #9DA2AB, #0D324D);
 }
-header .header__presentation .header__reseaux {
+header .header__reseaux {
+  margin-left: -1rem;
   text-align: center;
+  margin-top: 4rem;
 }
-header .header__presentation .header__reseaux .reseaux {
-  font-size: 3rem;
+header .header__reseaux .reseaux {
+  font-size: 2rem;
   color: #9DA2AB;
   margin-right: 2rem;
 }
-header .header__presentation .header__reseaux .reseaux:hover {
+header .header__reseaux .reseaux:hover {
   background: linear-gradient(to right, #9DA2AB, #0D324D);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: scale(1.2);
 }
 
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.burger span {
+  width: 30px;
+  height: 3px;
+  background-color: #9DA2AB;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1000px) {
+  header {
+    position: relative;
+    width: 100%;
+  }
+  header .header__titles {
+    display: flex;
+    flex-direction: column;
+  }
+  header .header__titles .img-burger {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  header .header__titles .img-burger .burger {
+    display: flex;
+  }
+  header .header__titles .header__text {
+    text-align: center;
+  }
+  header .header__titles .header__text p {
+    width: 100%;
+  }
+  header .header__navbar {
+    display: none;
+  }
+}
 .submit-btn {
   text-align: center;
   margin-top: 2rem;
@@ -456,6 +512,12 @@ main {
   width: 30px;
   height: 30px;
   object-fit: contain;
+}
+
+@media screen and (max-width: 1000px) {
+  main {
+    margin: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

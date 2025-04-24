@@ -11,6 +11,7 @@ header {
             p {
                 margin-right: 4rem;
                 width: 50%;
+                font-family: variable.$font-italic;
             }
             h1 {
                 margin-bottom: 0;
@@ -27,9 +28,8 @@ header {
             }
         }
         .header__navbar {
-            margin-bottom: 5rem;
             margin-top: 5rem;
-            margin-left: 1rem;
+            margin-left: 3rem;
             a {
                 color: variable.$color-text-primary;
             }
@@ -51,20 +51,64 @@ header {
                 background: linear-gradient(to right, variable.$color-text-primary, variable.$color-primary);
             }
         }
-        .header__reseaux {
-            text-align: center;
-            .reseaux {
-                font-size: 3rem;
-                color: variable.$color-text-primary;
-                margin-right: 2rem;
-                &:hover {
-                    background: linear-gradient(to right, #9DA2AB, #0D324D);
-                    background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    transform: scale(1.2);
-                }
+    }
+    .header__reseaux {
+        margin-left: -1rem;
+        text-align: center;
+        margin-top: 4rem;
+        .reseaux {
+            font-size: 2rem;
+            color: variable.$color-text-primary;
+            margin-right: 2rem;
+            &:hover {
+                background: linear-gradient(to right, #9DA2AB, #0D324D);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transform: scale(1.2);
             }
         }
     }
 }
 
+// Icône burger
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    span {
+        width: 30px;
+        height: 3px;
+        background-color: variable.$color-text-primary;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+}
+@media screen and (max-width: 1000px) {
+    header {
+        position: relative;
+        width: 100%;
+        .header__titles {
+            display: flex;
+            flex-direction: column;
+            .img-burger {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                .burger {
+                    display: flex;
+                }
+            }
+            .header__text {
+                text-align: center;
+                p {
+                    width: 100%;
+                }
+            }
+        }
+        .header__navbar {
+            display: none;
+        }
+    }
+}

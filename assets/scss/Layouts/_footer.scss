@@ -6,6 +6,9 @@ footer {
 }
 .footer__wrapper {
     padding: 0;
+    p {
+        font-family: variable.$font-italic;
+    }
     .footer__name {
         display: flex;
         gap: 4rem;
@@ -89,4 +92,14 @@ label {
     height: 2rem;
     background-color: variable.$color-text-primary;
     display: inline-block;
+}
+
+@media screen and (max-width:1000px) {
+    footer {
+        margin: 0;
+        .footer__wrapper .footer__name {
+            flex-direction: column;
+            gap: 0;
+        }
+    }
 }
