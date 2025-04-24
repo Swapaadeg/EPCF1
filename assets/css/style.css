@@ -189,7 +189,20 @@ label {
   font-family: "poppins extra-light";
   color: #9DA2AB;
 }
+.footer__credit .tardis-scroll {
+  width: 10%;
+  margin-left: 6rem;
+  animation: spinTardis 2s linear infinite;
+}
 
+@keyframes spinTardis {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .separator {
   width: 1px;
   height: 2rem;
@@ -204,6 +217,9 @@ label {
   footer .footer__wrapper .footer__name {
     flex-direction: column;
     gap: 0;
+  }
+  footer .tardis-scroll {
+    width: 100%;
   }
 }
 header {
@@ -389,6 +405,7 @@ main {
   color: #A188A6;
   display: inline-block;
   transition: all 0.3s ease;
+  cursor: url("../../assets/img/tft.png") 20 20, auto;
 }
 .description__content .tft:hover {
   background: linear-gradient(to right, #005A82, #C89B3C);
@@ -526,6 +543,21 @@ main {
   width: 30px;
   height: 30px;
   object-fit: contain;
+}
+
+.cursor-light {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1000px;
+  height: 1000px;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background: radial-gradient(circle, rgba(0, 102, 204, 0.15) 0%, rgba(0, 51, 102, 0.1) 40%, rgba(0, 0, 0, 0.05) 70%, transparent 90%);
+  filter: blur(45px);
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 @media screen and (max-width: 1000px) {

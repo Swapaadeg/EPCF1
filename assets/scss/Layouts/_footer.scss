@@ -85,7 +85,16 @@ label {
     padding: 2rem 0;
     font-family: variable.$font-xlight;
     color: variable.$color-text-primary;
+    .tardis-scroll {
+        width: 10%;
+        margin-left: 6rem;
+        animation: spinTardis 2s linear infinite;
+    }
 }
+@keyframes spinTardis {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
   
 .separator {
     width: 1px;
@@ -100,6 +109,9 @@ label {
         .footer__wrapper .footer__name {
             flex-direction: column;
             gap: 0;
+        }
+        .tardis-scroll {
+            width: 100%;
         }
     }
 }

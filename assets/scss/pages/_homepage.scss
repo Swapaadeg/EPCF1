@@ -16,6 +16,7 @@ main {
         color: variable.$color-title-text-secondary;
         display: inline-block;
         transition: all 0.3s ease;
+        cursor: url('../../assets/img/tft.png') 20 20, auto;
         &:hover {
             background: linear-gradient(to right, #005A82, #C89B3C);
             background-clip: text;
@@ -168,7 +169,33 @@ main {
     }
 }
 
+//curseur light for fun
+.cursor-light {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  
+    background: radial-gradient(
+      circle,
+      rgba(0, 102, 204, 0.15) 0%,      // bleu clair centre
+      rgba(0, 51, 102, 0.1) 40%,       // bleu foncé
+      rgba(0, 0, 0, 0.05) 70%,         // noir subtil
+      transparent 90%
+    );
+  
+    filter: blur(45px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
 
+
+
+//RESPONSIVE
 @media screen and (max-width:1000px) {
     main {
         margin: 0;

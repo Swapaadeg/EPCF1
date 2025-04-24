@@ -118,3 +118,30 @@ const dropdown = document.getElementById('menuDropdown');
 burger.addEventListener('click', () => {
   dropdown.classList.toggle('open');
 });
+
+
+//cursor light for fun
+const cursorLight = document.querySelector('.cursor-light');
+
+document.addEventListener('mousemove', (e) => {
+  cursorLight.style.left = `${e.clientX}px`;
+  cursorLight.style.top = `${e.clientY}px`;
+});
+
+
+//Tardis for fun
+const tardisLink = document.getElementById('tardisScroll');
+function updateTardisLink() {
+  if (window.innerWidth <= 768) {
+    // MOBILE → scroll au header
+    tardisLink.setAttribute('href', '#header__wrapper container');
+    tardisLink.setAttribute('target', '_self');
+  } else {
+    // DESKTOP → redirection vers générique
+    tardisLink.setAttribute('href', 'https://www.youtube.com/watch?v=vyPw25rYKFM&list=PLcWquS7QYEpQDoXYs0aKXn1J8MiIgobE5&index=1');
+    tardisLink.setAttribute('target', '_blank');
+  }
+}
+
+updateTardisLink();
+window.addEventListener('resize', updateTardisLink);
