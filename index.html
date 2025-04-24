@@ -25,10 +25,10 @@
                     </div>
                 <div class="header__navbar">
                     <ul>
-                        <li><a href="">A propos</a></li>
-                        <li><a href="">Projets</a></li>
-                        <li><a href="">Expérience</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="#description__wrapper container">A propos</a></li>
+                        <li><a href="#projets__wrapper container">Projets</a></li>
+                        <li><a href="#experience__wrapper container">Expérience</a></li>
+                        <li><a href="#footer__wrapper container">Contact</a></li>
                     </ul>
                 </div>
                 <div class="header__reseaux">
@@ -44,8 +44,8 @@
     <main>
         <section id="description__wrapper container">
             <div class="description__content">
-                <p>Je suis  une développeuse full-stack en formation à <a class="bold" href="https://www.talis.community/">Talis</a>. Passionnée par ce que je fais actuellement il n’est pas rare que je mette pause sur mon film pour aller coder une idée ou rajouter un hover sur un bouton.</p>
-                <p>Auparavant j’ai été infirmière puis vendeuse puis caissière et enfin charcutière. Aucun de ses métiers ne me correspondaient. Fan de technologies, de jeux vidéos depuis mes 10ans, la vie m’a enfin présenté l’occasion de suivre une formation en développement web full-stack au sein de Talis à Périgueux.</p>
+                <p>Je suis  une développeuse full-stack en formation à . Passionnée par ce que je fais actuellement il n’est pas rare que je mette pause sur mon film pour aller coder une idée ou rajouter un hover sur un bouton.</p>
+                <p>Auparavant j’ai été infirmière puis vendeuse puis caissière et enfin charcutière. Aucun de ses métiers ne me correspondaient. Fan de technologies, de jeux vidéos depuis mes 10ans, la vie m’a enfin présenté l’occasion de suivre une formation en développement web full-stack au sein de <a class="bold" href="https://www.talis.community/">Talis</a> à Périgueux.</p>
                 <p>Au quotidien je regarde des séries et des animés, je lis, je promène mes deux toutous et je joue aux <span class="tft">jeux vidéos</span>.</p>
             </div>
         </section>
@@ -208,50 +208,52 @@
         
         <!-- FOOTER -->
         <footer>
-            <div class="footer__wrapper container">
-                <span class="line"></span>
-                <h3>Contact</h3>
-                <form id="contactform">
-                    <div class="footer__name input">
-                        <div>
-                            <label for="nom">Nom *</label><br>
-                            <input type="text" id="nom" name="nom" required>
+            <section id="footer__wrapper container">
+                <div class="footer__wrapper container">
+                    <span class="line"></span>
+                    <h3>Contact</h3>
+                    <form id="contactform">
+                        <div class="footer__name input">
+                            <div>
+                                <label for="nom">Nom *</label><br>
+                                <input type="text" id="nom" name="nom" required>
+                            </div>
+                            
+                            <div class="input">
+                                <label for="prenom">Prénom *</label><br>
+                                <input type="text" id="prenom" name="prenom" required>
+                            </div>
+                        </div>
+                        <div class="input">
+                            <label for="email">Adresse Mail *</label><br>
+                            <input type="email" id="email" name="email" required>
                         </div>
                         
                         <div class="input">
-                            <label for="prenom">Prénom *</label><br>
-                            <input type="text" id="prenom" name="prenom" required>
+                            <label for="message">Message *</label><br>
+                            <textarea id="message" name="message" rows="6" required></textarea>
                         </div>
-                    </div>
-                    <div class="input">
-                        <label for="email">Adresse Mail *</label><br>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="input">
-                        <label for="message">Message *</label><br>
-                        <textarea id="message" name="message" rows="6" required></textarea>
-                    </div>
-                    
-                    <div class="input">
-                        <input type="checkbox" id="consentement" name="consentement" required>
-                        <label for="consentement">
-                            En soumettant ce formulaire, j’accepte que mes données personnelles soient utilisées pour me recontacter.
-                            Aucun autre traitement ne sera effectué avec mes informations.
-                        </label>
-                    </div>
-                    
-                    <div class="submit-btn">
-                        <button type="submit">Envoyer</button>
-                    </div>
-                </form>
-                <span class="line"></span>
-            </div>
-            <div class="footer__credit">
-                <p>© Copyright 2025</p>
-                <span class="separator"></span>
-                <p>Marie Rivier</p>
-            </div>
+                        
+                        <div class="input">
+                            <input type="checkbox" id="consentement" name="consentement" required>
+                            <label for="consentement">
+                                En soumettant ce formulaire, j’accepte que mes données personnelles soient utilisées pour me recontacter.
+                                Aucun autre traitement ne sera effectué avec mes informations.
+                            </label>
+                        </div>
+                        
+                        <div class="submit-btn">
+                            <button type="submit">Envoyer</button>
+                        </div>
+                    </form>
+                    <span class="line"></span>
+                </div>
+                <div class="footer__credit">
+                    <p>© Copyright 2025</p>
+                    <span class="separator"></span>
+                    <p>Marie Rivier</p>
+                </div>
+            </section>
         </footer>
 </body>
 <script src="assets/scripts/script.js"></script>

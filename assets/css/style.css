@@ -96,6 +96,10 @@ img {
   padding-top: 4rem;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 footer {
   margin-left: 50%;
 }
@@ -228,7 +232,7 @@ header .header__presentation .header__navbar li {
   list-style: none;
   margin-bottom: 0.5rem;
 }
-header .header__presentation .header__navbar li::before {
+header .header__presentation .header__navbar li a::before {
   content: "";
   display: inline-block;
   width: 70px;
@@ -237,7 +241,7 @@ header .header__presentation .header__navbar li::before {
   margin-right: 4rem;
   transition: width 0.3s ease, background 0.3s ease;
 }
-header .header__presentation .header__navbar li:hover::before {
+header .header__presentation .header__navbar li a:hover::before {
   width: 150px;
   background: linear-gradient(to right, #9DA2AB, #0D324D);
 }
