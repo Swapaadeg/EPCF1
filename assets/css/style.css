@@ -93,6 +93,7 @@ img {
 .container {
   width: 80%;
   margin: auto;
+  padding-top: 4rem;
 }
 
 footer {
@@ -370,28 +371,6 @@ main {
   border-radius: 1rem;
 }
 
-.carousel__btn {
-  margin: 1rem;
-  text-align: center;
-}
-.carousel__btn button {
-  background-color: #0D324D;
-  border: none;
-  color: #7F5A83;
-  padding: 8px 12px;
-  border-radius: 50%;
-  font-size: 1rem;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s, transform 0.2s;
-}
-.carousel__btn button:hover {
-  transform: scale(1.1);
-}
-.carousel__btn button:active {
-  transform: scale(0.95);
-}
-
 .experience__wrapper h3 {
   margin-bottom: 6rem;
 }
@@ -409,7 +388,8 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 200px);
-  gap: 100px;
+  row-gap: 100px;
+  justify-items: center;
 }
 .experience__wrapper .experience__grid .backend, .experience__wrapper .experience__grid .frontend {
   display: contents;
@@ -417,11 +397,7 @@ main {
 .experience__wrapper .experience__grid .backend .backend__text {
   grid-column: 1;
   grid-row: 1;
-  text-align: right;
-}
-.experience__wrapper .experience__grid .backend ul {
-  list-style-position: inside;
-  text-align: right;
+  width: 100%;
 }
 .experience__wrapper .experience__grid .backend .circle__img {
   grid-column: 2;
@@ -466,6 +442,7 @@ main {
   align-items: center;
   border: #0D324D 2px solid;
   border-radius: 50%;
+  padding: 0 3rem;
   justify-content: center;
 }
 .experience__wrapper .experience__grid .formation p {
