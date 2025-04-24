@@ -25,30 +25,29 @@ main {
     }
 }
 
+//Caroussel
 .carousel__wrapper {
-    height: 80vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     .carousel {
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.4s ease;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.4s ease;
     }
     .card {
         display: flex;
-        flex-shrink: 0;
         gap: 2rem;
         margin-bottom: 2rem;
         padding: 1.5rem;
         border: 2px solid variable.$color-primary;
         border-radius: 12px;
-        min-height: clamp(180px, 25vh, 240px);
         img {
-            width: clamp(120px, 30%, 300px);
+            width: 50%;
             height: auto;
-            object-fit: cover;
+            object-fit: contain;
             border-radius: 12px;
         }
         .projets__content {
@@ -69,6 +68,9 @@ main {
                 }
             }
         }
+    }
+    .card:last-child {
+        margin-bottom: 0;
     }
 }
 
@@ -166,8 +168,35 @@ main {
     }
 }
 
+
 @media screen and (max-width:1000px) {
     main {
         margin: 0;
+    }
+}
+
+//responsive caroussel
+@media screen and (max-width:768px) {
+    .carousel__wrapper {
+        width: 100%;
+    }
+    .card {
+        flex-direction: column;
+    }
+    .carousel__wrapper .card img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+//responsive experience 
+@media screen and (max-width: 768px) {
+    .experience__grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        row-gap: 100px;
+    }
+    .experience__wrapper .experience__grid .frontend .frontend__text {
+        grid-column: 1;
     }
 }

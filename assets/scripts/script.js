@@ -27,12 +27,27 @@ const nextBtn = document.querySelector('.next');
 const prevBtn = document.querySelector('.prev');
 
 let visibleCards = 3;
-let index = visibleCards;
+let index;
 let cards;
 
 function getCardHeight() {
   const card = document.querySelector('.carousel .card');
-  return card ? card.offsetHeight + 20 : 240;
+  if (!card) return 240;
+  const style = getComputedStyle(card);
+  const marginBottom = parseFloat(style.marginBottom);
+  return card.offsetHeight + marginBottom;
+}
+
+// 🆕 Calcule dynamiquement la hauteur du wrapper pour éviter les cartes coupées
+function setCarouselWrapperHeight() {
+  const wrapper = document.querySelector('.carousel__wrapper');
+  const card = document.querySelector('.carousel .card');
+  if (wrapper && card) {
+    const style = getComputedStyle(card);
+    const marginBottom = parseFloat(style.marginBottom);
+    const totalHeight = (card.offsetHeight + marginBottom) * visibleCards;
+    wrapper.style.height = `${totalHeight}px`;
+  }
 }
 
 function cloneCards() {
@@ -66,7 +81,9 @@ function moveToIndex() {
 
 function initCarousel() {
   cloneCards();
-  resetToIndex(visibleCards);
+  setCarouselWrapperHeight(); // 🔥 Ajout essentiel
+  index = visibleCards;
+  resetToIndex(index);
 }
 
 nextBtn.addEventListener('click', () => {
@@ -96,8 +113,8 @@ initCarousel();
 //menu burger 
 
 const burger = document.getElementById('burger');
-const navbar = document.getElementById('navbar');
+const dropdown = document.getElementById('menuDropdown');
 
 burger.addEventListener('click', () => {
-  navbar.classList.toggle('open');
+  dropdown.classList.toggle('open');
 });
