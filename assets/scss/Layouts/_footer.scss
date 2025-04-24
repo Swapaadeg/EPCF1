@@ -1,3 +1,98 @@
-footer {
-    width: 50%;
+@use "../abstracts/variables" as variable;
+
+//FORMULAIRE
+.footer__wrapper {
+    width: 100%;
+    padding: 0;
+    h3 {
+        text-align: center;
+    }
+    .footer__name {
+        display: flex;
+        gap: 4rem;
+        > div {
+            flex: 1 1;
+        }
+    }
+    //Separateur et animation
+    .line {
+        width: 70%;
+        height: 1px;
+        display: block;
+        margin: 4rem auto;
+        border-radius: 2px;
+        background: linear-gradient(90deg, #7F5A83, #A188A6, #9DA2AB, #7F5A83);
+        background-size: 300% 100%;
+        animation: gradientGlow 4s ease infinite;
+        box-shadow: 0 0 10px #7F5A83, 0 0 20px #A188A6;
+    }
+    @keyframes gradientGlow {
+        0% {
+          background-position: 0% 50%;
+          box-shadow: 0 0 10px #7F5A83, 0 0 20px #A188A6;
+        }
+        50% {
+          background-position: 100% 50%;
+          box-shadow: 0 0 20px #A188A6, 0 0 40px #9DA2AB;
+        }
+        100% {
+          background-position: 0% 50%;
+          box-shadow: 0 0 10px #7F5A83, 0 0 20px #A188A6;
+        }
+    }
+}
+
+.input {
+    margin-bottom: 1rem;
+}
+input:focus, textarea:focus {
+  background-color: variable.$color-accent;
+}
+input:valid, textarea:valid {
+  border: 2px solid variable.$color-text-primary;
+  box-shadow: 0 0 6px variable.$color-text-primary;
+  background-color: variable.$color-accent;
+}
+input, textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 16px;
+    border: none;
+    background-color: variable.$color-primary;
+    font-size: 1rem;
+    color: variable.$color-text-primary;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+label {
+    display: block;
+    margin-bottom: -1rem;
+    color: variable.$color-text-primary;
+}
+.input input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+.input label[for="consentement"] {
+    display: inline;
+    font-family: variable.$font-xlight;
+    font-size: 0.9rem;
+}
+
+//Copyright
+.footer__credit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 0;
+    font-family: variable.$font-xlight;
+    color: variable.$color-text-primary;
+}
+  
+.separator {
+    width: 1px;
+    height: 2rem;
+    background-color: variable.$color-text-primary;
+    display: inline-block;
 }

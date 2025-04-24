@@ -1,9 +1,9 @@
 @use "../abstracts/variables" as variable;
 main {
-    width: 50%;
-    margin-left: 50%;
+    grid-column: 2;
+    margin-left: 35%;
 }
-
+//Description
 .description__content {
     a {
         font-family: variable.$font-bold;
@@ -12,16 +12,150 @@ main {
     a:hover {
         color: variable.$color-accent;
     }
-    span {
+    .tft {
         font-family: variable.$font-bold;
         color: variable.$color-title-text-secondary;
+        display: inline-block;
         transition: all 0.3s ease;
+        &:hover {
+            background: linear-gradient(to right, #005A82, #C89B3C);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transform: scale(1.1);
+        }
     }
-    span:hover {
-        cursor: url(../../assets/img/tft.png) 16 16, auto;
-        background: linear-gradient(to right, #005A82, #C89B3C);
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        transform: scale(1.1);
+}
+
+//Projets
+.projets__wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    .fa-solid {
+        font-size: 2rem;
+    }
+    .card {
+        display: flex;
+        gap: 1rem;
+        img {
+            width: 50%;
+        }
+        .projets__content {
+            text-align: justify;
+            .title {
+                font-family: variable.$font-bold;
+                margin-bottom: 0;
+            }
+            .langages {
+                display: flex;
+                gap: 2rem;
+                .langage {
+                    background-color: variable.$color-primary;
+                    padding: 12px 30px;
+                    border-radius: 16px;
+                    font-family: variable.$font-secondary;
+                    color: variable.$color-accent;
+                }
+            }
+        }
+    }
+}
+
+//Expériences
+.experience__wrapper {
+    h3 {
+    text-align: center;
+    margin-bottom: 6rem;
+    }
+    .experience__p {
+    font-family: variable.$font-secondary;
+    }
+    .circle__img {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+    //GRID
+    .experience__grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 200px);
+        gap: 100px;
+        .backend, .frontend {
+        display: contents;
+        }
+        //BACKEND
+        .backend {
+            .backend__text {
+                grid-column: 1;
+                grid-row: 1;
+                text-align: right;
+            }
+            ul {
+                list-style-position: inside;
+                text-align: right;
+            }
+            .circle__img {
+                grid-column: 2;
+                grid-row: 1;
+            img {
+                border-radius: 50%;
+            }
+            }
+            .line-verticale {
+                grid-column: 2;
+                grid-row: 1;
+                justify-self: center;
+                width: 3px;
+                height: 300px;
+                background-color: variable.$color-primary;
+            }
+            .line-verticale2 {
+                grid-column: 2;
+                grid-row: 2;
+                justify-self: center;
+                width: 3px;
+                height: 300px;
+                background-color: variable.$color-primary;
+            }
+        }
+        //FRONTEND
+        .frontend {
+            .frontend__text {
+            grid-column: 3;
+            grid-row: 2;
+
+            }
+            .circle__img {
+                grid-column: 2;
+                grid-row: 2;
+                border: 15px solid black;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+            }
+        }
+        //FORMATION
+        .formation {
+            grid-column: 2;
+            grid-row: 3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: variable.$color-primary 2px solid;
+            border-radius: 50%;
+            justify-content: center;
+           p{
+           margin: 0;
+           }
+           img {
+           width: 30px;
+           height: 30px;
+           object-fit: contain;
+           }
+        }
     }
 }

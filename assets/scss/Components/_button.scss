@@ -1,0 +1,24 @@
+@use "../abstracts/variables" as variable;
+.submit-btn {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.submit-btn button {
+    background-color: variable.$color-primary;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+    color: variable.$color-accent;
+    font-family: variable.$font-bold;
+    cursor: pointer;
+    &:hover {
+        color: variable.$color-text-primary;
+        box-shadow: 0 0 10px variable.$color-accent,
+                    0 0 20px variable.$color-accent,
+                    0 0 40px variable.$color-accent;
+        transform: translateY(-2px) scale(1.02);
+    }
+}

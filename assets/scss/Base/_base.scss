@@ -8,7 +8,9 @@ body {
     font-family: variable.$font-primary;
     background-color: variable.$color-bg;
     color: variable.$color-text-primary;
-    display: flex;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    min-height: 100vh;
 }
 
 section {
