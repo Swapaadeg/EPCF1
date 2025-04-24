@@ -1,4 +1,6 @@
 @use "../abstracts/variables" as variable;
+
+//SUBMIT BTN
 .submit-btn {
     text-align: center;
     margin-top: 2rem;
@@ -20,5 +22,30 @@
                     0 0 20px variable.$color-accent,
                     0 0 40px variable.$color-accent;
         transform: translateY(-2px) scale(1.02);
+    }
+}
+
+//CAROUSSEL BTN
+.carousel__btn {
+    margin: 1rem;
+    text-align: center;
+    button {
+        background-color: variable.$color-primary;
+        border: none;
+        color: variable.$color-accent;
+        padding: 8px 12px;
+        border-radius: 50%;
+        font-size: 1rem;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        transition: background-color 0.3s, transform 0.2s;
+    
+        &:hover {
+          transform: scale(1.1);
+        }
+    
+        &:active {
+          transform: scale(0.95);
+        }
     }
 }

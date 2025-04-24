@@ -1,17 +1,16 @@
 @use "../abstracts/variables" as variable;
 
 header {
-    grid-column: 1;
     position: fixed;
     width: 35%;
-    height: 100vh;
     .header__presentation {
         .header__titles {
             display: flex;
             align-items: center;
+            width: 100%;
             p {
                 margin-right: 4rem;
-                width: 70%;
+                width: 50%;
             }
             h1 {
                 margin-bottom: 0;
@@ -53,12 +52,11 @@ header {
             }
         }
         .header__reseaux {
-            display: flex;
-            gap: 4rem;
-            margin-left: 12rem;
+            text-align: center;
             .reseaux {
                 font-size: 3rem;
                 color: variable.$color-text-primary;
+                margin-right: 2rem;
                 &:hover {
                     background: linear-gradient(to right, #9DA2AB, #0D324D);
                     background-clip: text;

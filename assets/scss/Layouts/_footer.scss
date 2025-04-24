@@ -1,12 +1,11 @@
 @use "../abstracts/variables" as variable;
 
 //FORMULAIRE
+footer {
+    margin-left: 50%;
+}
 .footer__wrapper {
-    width: 100%;
     padding: 0;
-    h3 {
-        text-align: center;
-    }
     .footer__name {
         display: flex;
         gap: 4rem;
@@ -46,11 +45,6 @@
     margin-bottom: 1rem;
 }
 input:focus, textarea:focus {
-  background-color: variable.$color-accent;
-}
-input:valid, textarea:valid {
-  border: 2px solid variable.$color-text-primary;
-  box-shadow: 0 0 6px variable.$color-text-primary;
   background-color: variable.$color-accent;
 }
 input, textarea {

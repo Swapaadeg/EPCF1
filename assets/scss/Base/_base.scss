@@ -8,9 +8,8 @@ body {
     font-family: variable.$font-primary;
     background-color: variable.$color-bg;
     color: variable.$color-text-primary;
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 section {
@@ -19,22 +18,26 @@ section {
 
 h1 {
     font-family: variable.$font-h1-h3;
-    font-size: 3rem;
+    font-size: 2rem;
     color: variable.$color-title-text-secondary;
 }
 
 h2 {
     font-family: variable.$font-h2;
     color: variable.$color-title-text-secondary;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 h3 {
     font-family: variable.$font-h1-h3;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: variable.$color-title-text-secondary;
+    text-align: center;
 }
 
+p {
+    font-size: 0.9rem;
+}
 a {
     text-decoration: none;
 }
