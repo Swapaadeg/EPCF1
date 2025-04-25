@@ -26,8 +26,8 @@ const carousel = document.querySelector('.carousel');
 const nextBtn = document.querySelector('.next');
 const prevBtn = document.querySelector('.prev');
 
+let index = 0;
 let visibleCards = 3;
-let index;
 let cards;
 
 function getCardHeight() {
@@ -38,7 +38,7 @@ function getCardHeight() {
   return card.offsetHeight + marginBottom;
 }
 
-// 🆕 Calcule dynamiquement la hauteur du wrapper pour éviter les cartes coupées
+// Calcule dynamiquement la hauteur du wrapper pour éviter les cartes coupées
 function setCarouselWrapperHeight() {
   const wrapper = document.querySelector('.carousel__wrapper');
   const card = document.querySelector('.carousel .card');
@@ -49,7 +49,6 @@ function setCarouselWrapperHeight() {
     wrapper.style.height = `${totalHeight}px`;
   }
 }
-
 function cloneCards() {
   cards = document.querySelectorAll('.carousel .card');
   const firstClones = [];
@@ -110,7 +109,7 @@ prevBtn.addEventListener('click', () => {
 
 initCarousel();
 
-//menu burger 
+//MENU BURGER
 
 const burger = document.getElementById('burger');
 const dropdown = document.getElementById('menuDropdown');
@@ -120,7 +119,7 @@ burger.addEventListener('click', () => {
 });
 
 
-//cursor light for fun
+//CURSOR LIGHT FOR FUN
 const cursorLight = document.querySelector('.cursor-light');
 
 document.addEventListener('mousemove', (e) => {
@@ -129,19 +128,44 @@ document.addEventListener('mousemove', (e) => {
 });
 
 
-//Tardis for fun
+//TARDIS
 const tardisLink = document.getElementById('tardisScroll');
 function updateTardisLink() {
-  if (window.innerWidth <= 768) {
-    // MOBILE → scroll au header
+  if (window.innerWidth <= 1000) {
+    // MOBILE => scroll au header
     tardisLink.setAttribute('href', '#header__wrapper container');
     tardisLink.setAttribute('target', '_self');
   } else {
-    // DESKTOP → redirection vers générique
+    // DESKTOP => redirection vers générique
     tardisLink.setAttribute('href', 'https://www.youtube.com/watch?v=vyPw25rYKFM&list=PLcWquS7QYEpQDoXYs0aKXn1J8MiIgobE5&index=1');
     tardisLink.setAttribute('target', '_blank');
   }
 }
-
 updateTardisLink();
 window.addEventListener('resize', updateTardisLink);
+
+
+
+//La navbar est active
+const sections = document.querySelectorAll('section[id*="wrapper"]');
+const navLinks = document.querySelectorAll('.nav-link');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const id = entry.target.getAttribute('id');
+    const link = document.querySelector(`.nav-link[href="#${id}"]`);
+
+    if (entry.isIntersecting) {
+      navLinks.forEach(l => l.classList.remove('active'));
+      if (link) link.classList.add('active');
+    }
+  });
+}, {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.6
+});
+
+sections.forEach(section => {
+  observer.observe(section);
+});

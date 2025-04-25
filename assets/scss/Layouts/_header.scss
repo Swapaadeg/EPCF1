@@ -50,6 +50,10 @@ header {
                 width: 150px; 
                 background: linear-gradient(to right, variable.$color-text-primary, variable.$color-primary);
             }
+            li a.active::before {
+                width: 150px;
+                background: linear-gradient(to right, variable.$color-text-primary, variable.$color-primary);
+              }
         }
     }
     .header__reseaux {

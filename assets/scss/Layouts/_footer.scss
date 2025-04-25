@@ -89,6 +89,9 @@ label {
         width: 10%;
         margin-left: 6rem;
         animation: spinTardis 2s linear infinite;
+        img:hover {
+            transform: scale(1.2);
+        }
     }
 }
 @keyframes spinTardis {

@@ -194,6 +194,9 @@ label {
   margin-left: 6rem;
   animation: spinTardis 2s linear infinite;
 }
+.footer__credit .tardis-scroll img:hover {
+  transform: scale(1.2);
+}
 
 @keyframes spinTardis {
   0% {
@@ -270,6 +273,10 @@ header .header__presentation .header__navbar li a::before {
   transition: width 0.3s ease, background 0.3s ease;
 }
 header .header__presentation .header__navbar li a:hover::before {
+  width: 150px;
+  background: linear-gradient(to right, #9DA2AB, #0D324D);
+}
+header .header__presentation .header__navbar li a.active::before {
   width: 150px;
   background: linear-gradient(to right, #9DA2AB, #0D324D);
 }
