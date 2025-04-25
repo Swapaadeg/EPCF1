@@ -1,4 +1,4 @@
-Choix techniques
+Choix techniques :
 Pour la réalisation de ce projet, j’ai fait plusieurs choix techniques visant à optimiser le développement, la clarté du code et le rendu visuel :
 
 HTML a été utilisé comme structure de base du site.
