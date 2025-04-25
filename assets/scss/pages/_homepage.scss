@@ -187,13 +187,21 @@ main {
       rgba(0, 51, 102, 0.1) 40%,       // bleu foncé
       rgba(0, 0, 0, 0.05) 70%,         // noir subtil
       transparent 90%
-    );
-  
-    filter: blur(45px);
-    transition: transform 0.3s ease, opacity 0.3s ease;
+      );
+      
+      filter: blur(45px);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    
+//GET JINXED!!
+.jinx-mode {
+    background: url('../../assets/img/jinx-arcane.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #ff00ff;
+    transition: all 0.5s ease-in-out;
 }
-
-
 
 //RESPONSIVE
 @media screen and (max-width:1000px) {
@@ -228,13 +236,4 @@ main {
     }
 }
 
-.jinx-mode {
-    background: url('../../assets/img/jinx-arcane.jpg') center/cover no-repeat;
-    color: #ff00ff;
-    transition: all 0.5s ease-in-out;
-  }
   
-  .jinx-mode .title {
-    transform: rotate(-3deg) scale(1.1);
-    color: cyan;
-  }

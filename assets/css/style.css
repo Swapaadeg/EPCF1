@@ -567,6 +567,15 @@ main {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+.jinx-mode {
+  background: url("../../assets/img/jinx-arcane.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #ff00ff;
+  transition: all 0.5s ease-in-out;
+}
+
 @media screen and (max-width: 1000px) {
   main {
     margin: 0;
@@ -593,16 +602,6 @@ main {
   .experience__wrapper .experience__grid .frontend .frontend__text {
     grid-column: 1;
   }
-}
-.jinx-mode {
-  background: url("../../assets/img/jinx-arcane.jpg") center/cover no-repeat;
-  color: #ff00ff;
-  transition: all 0.5s ease-in-out;
-}
-
-.jinx-mode .title {
-  transform: rotate(-3deg) scale(1.1);
-  color: cyan;
 }
 
 /*# sourceMappingURL=style.css.map */
