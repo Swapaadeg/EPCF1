@@ -180,7 +180,6 @@ main {
     pointer-events: none;
     transform: translate(-50%, -50%);
     z-index: -1;
-  
     background: radial-gradient(
       circle,
       rgba(0, 102, 204, 0.15) 0%,      // bleu clair centre
@@ -201,7 +200,17 @@ main {
     background-position: center;
     color: #ff00ff;
     transition: all 0.5s ease-in-out;
+    h1, h2, h3 {
+        color: cyan;
+
+    }
+    a {
+        background: linear-gradient(270deg, #ff00ff, cyan);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }
+
 
 //RESPONSIVE
 @media screen and (max-width:1000px) {
