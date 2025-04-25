@@ -172,3 +172,46 @@ const observer = new IntersectionObserver((entries) => {
 sections.forEach(section => {
   observer.observe(section);
 });
+
+
+//Easter egg
+
+let input = "";
+let jinxAudio = null;
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Backspace") {
+    input = input.slice(0, -1);
+  } else {
+    input += e.key.toLowerCase();
+  }
+
+  // Activer Jinx mode si le mot "jinx" est détecté
+  if (input.includes("jinx")) {
+    activateJinxMode();
+  }
+
+  if (input.length === 0) {
+    deactivateJinxMode();
+  }
+
+  if (input.length > 10) {
+    input = input.slice(-10);
+  }
+});
+
+function activateJinxMode() {
+  if (!document.body.classList.contains("jinx-mode")) {
+    document.body.classList.add("jinx-mode");
+    jinxAudio = new Audio('assets/audio/Jinx.mp3');
+    jinxAudio.play();
+  }
+}
+
+function deactivateJinxMode() {
+  document.body.classList.remove("jinx-mode");
+  if (jinxAudio) {
+    jinxAudio.pause();
+    jinxAudio.currentTime = 0;
+  }
+}

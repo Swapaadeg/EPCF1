@@ -594,5 +594,15 @@ main {
     grid-column: 1;
   }
 }
+.jinx-mode {
+  background: url("../../assets/img/jinx-arcane.jpg") center/cover no-repeat;
+  color: #ff00ff;
+  transition: all 0.5s ease-in-out;
+}
+
+.jinx-mode .title {
+  transform: rotate(-3deg) scale(1.1);
+  color: cyan;
+}
 
 /*# sourceMappingURL=style.css.map */
